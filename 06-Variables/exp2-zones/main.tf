@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "dev" {
   count = 2 
-  ami           = "ami-0cea098ed2ac54925"
+  ami           = "ami-09cd747c78a9add63"
   instance_type = "t2.micro"
   availability_zone = var.zones[count.index]
 
